@@ -1,0 +1,8 @@
+<div class="header-wrap center">
+    <a class="app-link back" routerLink="/dashboard" title="Back">
+        <mat-icon>arrow_back</mat-icon>
+    </a>
+    <h1 class="header">User photos</h1>
+</div>
+
+<pg-photos-gallery *ngIf="userId" [userId]="userId"></pg-photos-gallery>

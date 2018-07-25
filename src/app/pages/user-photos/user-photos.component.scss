@@ -1,0 +1,14 @@
+.header-wrap {
+    .header, .back {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .back {
+        height: 24px;
+        position: relative;
+        left: -15px;
+        color: blue;
+        top: 2px;
+    }
+}

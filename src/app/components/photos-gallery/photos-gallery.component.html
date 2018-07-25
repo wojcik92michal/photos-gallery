@@ -1,0 +1,56 @@
+<div class="photos-gallery container">
+
+    <div class="search">
+        <form (ngSubmit)="onFilterSubmit()">
+            <!-- text -->
+            <div class="input-wrap">
+                <input type="text" name="text" placeholder="Free text" [(ngModel)]="form.text" />
+            </div>
+
+            <!-- date from -->
+            <div class="input-wrap middle">
+                <input [matDatepicker]="dateFromDatepicker" name="min_upload_date " placeholder="Date from" [(ngModel)]="form.min_upload_date "
+                />
+                <mat-datepicker #dateFromDatepicker></mat-datepicker>
+                <mat-datepicker-toggle matSuffix [for]="dateFromDatepicker"></mat-datepicker-toggle>
+            </div>
+
+            <!-- date to -->
+            <div class="input-wrap last">
+                <input [matDatepicker]="dateToDatepicker" name="max_upload_date" placeholder="Date to" [(ngModel)]="form.max_upload_date"
+                />
+                <mat-datepicker #dateToDatepicker></mat-datepicker>
+                <mat-datepicker-toggle matSuffix [for]="dateToDatepicker"></mat-datepicker-toggle>
+            </div>
+
+            <!-- date to -->
+            <div class="input-wrap">
+                <button type="submit">Filter</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="center">
+        <agm-map [zoom]="1">
+            <agm-marker *ngFor="let geo of geoData" [latitude]="geo.lat" [longitude]="geo.lng">
+                <agm-info-window>
+                    <span>Title:
+                        <b>{{geo.title}}</b>
+                    </span>
+                    <br>
+                    <span>
+                        By: <b>{{geo.owner}}</b>
+                    </span>
+                </agm-info-window>
+            </agm-marker>
+        </agm-map>
+    </div>
+
+    <pg-gallery-presenter pgInfiniteScroll (pageEnd)="onPageEnd()" *ngIf="photos" [photos]="photos"></pg-gallery-presenter>
+
+    <h3 class="center" *ngIf="areAllPhotosLoaded()">Hooray, you have seen all photos!</h3>
+
+    <div class="loading-wrap" *ngIf="isLoading">
+        <pg-loading-indicator></pg-loading-indicator>
+    </div>
+</div>

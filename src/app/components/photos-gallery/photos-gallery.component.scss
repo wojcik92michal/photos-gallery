@@ -1,0 +1,61 @@
+.photos-gallery {
+    .loading-wrap {
+        margin-bottom: 20px;
+    }
+
+    agm-map {
+        height: 300px;
+        width: 500px;
+        display: inline-block;
+    }
+
+    .search {
+        margin-bottom: 30px;
+        text-align: center;
+
+        form {
+            border: 1px solid #bfbfbf;
+            display: inline-block;
+            border-radius: 100px;
+            background-color: white;
+            padding: 0px 30px;
+        }
+
+        .input-wrap {
+            display: inline-block;
+
+            input {
+                padding: 20px;
+                border: none;
+            }
+
+            &.middle {
+                border: 1px solid #bfbfbf;
+                border-width: 0px 1px;
+            }
+
+            &.last {
+                margin-right: 20px;
+                border-right: 1px solid #bfbfbf;
+            }
+        }
+
+        button {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: #f7f8fe;
+            border-radius: 100px;
+            background-color: #31cf94;
+            padding: 14px 45px 14px 45px;
+            border: none;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #38bd8c;
+        }
+    }
+}

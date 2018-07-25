@@ -1,0 +1,36 @@
+{
+    "name": "Dog photos gallery",
+    "short_name": "Dog photos gallery",
+    "description": "Simple app to display dog photos",
+    "start_url": "/?homescreen=1",
+    "display": "standalone",
+    "theme_color": "#002f55",
+    "background_color": "#fff",
+    "icons": [
+        {
+            "src": "assets/logo/logo-128x128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/logo/logo-152x152.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/logo/logo-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/logo/logo-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/logo/logo-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

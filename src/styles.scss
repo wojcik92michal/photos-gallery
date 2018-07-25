@@ -1,0 +1,50 @@
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:400,700|Material+Icons');
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+body {
+    margin: 0px;
+    background-color: #46b28e;
+}
+
+p {
+    margin: 0px;
+}
+
+.center {
+    text-align: center;
+}
+
+.container {
+    max-width: 1500px;
+    margin: auto;
+}
+
+.app-link {
+    text-decoration: none;
+    color: black;
+}
+
+/* mixin for multiline */
+.block-with-text {
+    overflow: hidden;
+    position: relative;
+    line-height: 1.2em;
+    max-height: 100%;
+    text-align: justify;
+    margin-right: -1em;
+    padding-right: 1em;
+}
+
+input, button {
+    outline: none;
+}
+
+.info-bar {
+    padding: 20px;
+
+    p {
+        font-size: 1.25rem;
+        color: white;
+    }
+}

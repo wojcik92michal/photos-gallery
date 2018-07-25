@@ -1,0 +1,25 @@
+<div class="photo">
+    <div class="photo-info">
+        <p>By:
+            <a class="owner app-link" [routerLink]="userUrl">{{photo.ownername}}</a>
+        </p>
+    </div>
+
+    <div class="photo-info">
+        <p>
+            {{title}}
+        </p>
+    </div>
+
+    <img [src]="url">
+    <div class="photo-info">
+        <p>{{photoDate}}</p>
+    </div>
+    <div *ngIf="photoDescription" class="photo-description-wrap">
+        <div class="photo-description">
+            <p class="block-with-text">
+                {{photoDescription}}
+            </p>
+        </div>
+    </div>
+</div>

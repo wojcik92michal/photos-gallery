@@ -1,0 +1,12 @@
+<div class="app">
+    <pg-offline-bar></pg-offline-bar>
+    <pg-error-bar [error]="error"></pg-error-bar>
+
+    <div [style.display]="(showGlobalLoadingIndicator | async) ? 'block' : 'none'">
+        <div class="loading-indicator-wrap">
+            <pg-loading-indicator [showBig]="true"></pg-loading-indicator>
+        </div>
+    </div>
+
+    <router-outlet></router-outlet>
+</div>
